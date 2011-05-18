@@ -1,0 +1,5 @@
+## ignores for mercurial repository
+
+syntax: glob
+
+*.pyc

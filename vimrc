@@ -139,7 +139,10 @@ map <F12> :execute HB:Folding()<CR>
 map <F11> :TlistToggle <CR>
 
 " open current directory in vertical split window
-map <F10> :vs . <CR>
+" map <F10> :vs . <CR>
+
+" open quickfix window
+map <F10> :cw <CR>
 
 "go to first tabpage, useful if tab 1 has the filebrowsing window
 map <F9> :tabfirst <CR>
