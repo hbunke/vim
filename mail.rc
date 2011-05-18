@@ -1,0 +1,11 @@
+set textwidth=65
+
+"Signature is linked to Type
+hi Type ctermfg=darkred guifg=#406090 gui=italic cterm=none
+
+" First Quote is linked to Identifier
+hi Identifier ctermfg=blue cterm=none guifg=blue gui=none
+
+"set window position centered
+winp 275 26
+
