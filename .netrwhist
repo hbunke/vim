@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/bunke/ejdev/zbw.ejTheme/zbw/ejTheme/skins/zbw_ejTheme_custom_templates'
 let g:netrw_dirhist_2='/home/bunke/ejdev/Products.eJournal/Products/eJournal/browser'
 let g:netrw_dirhist_3='/home/bunke/ejdev/Products.eJournal/Products'
 let g:netrw_dirhist_4='/home/bunke/ejdev/Products.eJournal/Products/eJournal/Extensions'
+let g:netrw_dirhist_5='/home/bunke/ejdev/Products.eJournal'
