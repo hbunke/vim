@@ -85,6 +85,8 @@ autocmd BufRead *.css.dtml :set syntax=css
 autocmd FileType python compiler pylint
 autocmd FileType python set number
 let g:pylint_onwrite = 0
+autocmd BufRead,BufNewFile hg-editor-*.txt :set syntax=hgcommit
+
 
 
 "autocmd BufRead *.py :set fo-=t
