@@ -1,5 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/bunke/ejdev/Products.eJournal/Products/eJournal/content'
-let g:netrw_dirhist_2='/home/bunke/ejdev/Products.eJournal/Products/eJournal/profiles'
-let g:netrw_dirhist_3='/home/bunke/ejdev/Products.eJournal/Products/eJournal/profiles/default'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/bunke/ejdev/Products.eJournal/Products/eJournal/skins'
+let g:netrw_dirhist_2='/home/bunke/ejdev/Products.eJournal/Products/eJournal/skins/eJournal'
