@@ -30,6 +30,8 @@ set switchbuf=newtab
 let g:hgrevFlags = '-nb'
 let g:hgrevAddStatus = 0
 let g:hgrevNoRepoChar = ''
+"let g:hgrevAutoUpdate = 1
+
 
 "set statusline=%<%f\ [%{HGRev()}]\ %h%m%r%=%l,%c%V\ %P
 set statusline=%<%f\ %#HGRev#[%{HGRev()}]%*\ %h%m%r%=%l,%c%V\ %P
@@ -161,6 +163,8 @@ map <F10> :cw <CR>
 
 "go to first tabpage, useful if tab 1 has the filebrowsing window
 map <F9> :tabfirst <CR>
+
+map :hg :RefreshMercurialRev
 
 
 " testing toggle filebrowser toggle
