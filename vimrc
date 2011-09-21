@@ -26,7 +26,12 @@ set switchbuf=newtab
 "let VCSCommandEnableBufferSetup=1
 "set statusline=%<%f\ %{VCSCommandGetStatusLine()}\ %h%m%r%=%l,%c%V\ %P
 
+"hgRev works; see :help HGRevOptions
+let g:hgrevFlags = '-nb'
+let g:hgrevAddStatus = 0
+let g:hgrevNoRepoChar = ''
 
+set statusline=%<%f\ [%{HGRev()}]\ %h%m%r%=%l,%c%V\ %P
 
 "xml-plugin
 let xml_no_auto_nesting = 1
