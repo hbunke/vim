@@ -21,12 +21,19 @@ set ruler
 set hlsearch
 set switchbuf=newtab
 
+" option würde Darstellung des revision status etc erlauben. Funktioniert aber
+" offenbar
+"let VCSCommandEnableBufferSetup=1
+"set statusline=%<%f\ %{VCSCommandGetStatusLine()}\ %h%m%r%=%l,%c%V\ %P
+
+
+
 "xml-plugin
 let xml_no_auto_nesting = 1
 "let xml_tag_completion_map = "/"
 
 "statusline immer an (mit hintergrund etc.)
-"set laststatus=2
+set laststatus=2
 
 "dateiname in tabs einfach, ohne pfad. Plus Tabnr.
 set gtl=[%N]\ %t
