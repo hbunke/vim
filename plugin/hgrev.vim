@@ -89,14 +89,26 @@ function! <SID>RefreshMercurialRev()
 
 	" Find the rev for the repo containing the current file buffer.
 	"
-	let l:cmd     = 'hg id ' . g:hgrevFlags . ' ' . l:root
-	let l:rev     = system( l:cmd )
+	"==== old ====
+	"let l:cmd     = 'hg id ' . g:hgrevFlags . ' ' . l:root
+	"let l:rev     = system( l:cmd )
+	
+	" new! HB 201109921"
+	let l:rev_nr = system('hg id -n' . ' ' . l:root)
+	let l:rev_branch = system('hg id -b' . ' ' . l:root)
 	let l:hg_exit = v:shell_error
-
 	if l:hg_exit == 0
-		let l:rev = substitute( l:rev, '\n', '', 'g' )
-		let g:hg_revs[ l:key ] = l:rev
+		let l:rev = l:rev_branch . ':' . l:rev_nr
 	endif
+	let l:rev = substitute( l:rev, '\n', '', 'g' )
+	let g:hg_revs[ l:key ] = 'hg ' . l:rev 
+	" end new "
+
+
+	"if l:hg_exit == 0
+	"	let l:rev = substitute( l:rev, '\n', '', 'g' )
+	"	let g:hg_revs[ l:key ] = l:rev 
+	"endif
 
 	" Add file repo status.
 	"
