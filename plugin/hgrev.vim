@@ -99,10 +99,11 @@ function! <SID>RefreshMercurialRev()
 	let l:hg_exit = v:shell_error
 	if l:hg_exit == 0
 		let l:rev = l:rev_branch . ':' . l:rev_nr
+		let l:rev = substitute( l:rev, '\n', '', 'g' )
+		let g:hg_revs[ l:key ] = 'hg ' . l:rev 
+
 	endif
-	let l:rev = substitute( l:rev, '\n', '', 'g' )
-	let g:hg_revs[ l:key ] = 'hg ' . l:rev 
-	" end new "
+		" end new "
 
 
 	"if l:hg_exit == 0
