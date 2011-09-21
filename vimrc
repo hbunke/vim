@@ -31,7 +31,8 @@ let g:hgrevFlags = '-nb'
 let g:hgrevAddStatus = 0
 let g:hgrevNoRepoChar = ''
 
-set statusline=%<%f\ [%{HGRev()}]\ %h%m%r%=%l,%c%V\ %P
+"set statusline=%<%f\ [%{HGRev()}]\ %h%m%r%=%l,%c%V\ %P
+set statusline=%<%f\ %#HGRev#[%{HGRev()}]%*\ %h%m%r%=%l,%c%V\ %P
 
 "xml-plugin
 let xml_no_auto_nesting = 1

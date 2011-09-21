@@ -35,7 +35,7 @@ hi ModeMsg gui=bold
 hi LineNr guifg=Gray60
 "hi LineNr guifg=Red3
 hi Question gui=bold guifg=SeaGreen
-hi StatusLine gui=bold guifg=White guibg=Black
+hi StatusLine gui=bold guifg=White guibg=Black ctermfg=white ctermbg=black cterm=bold
 hi StatusLineNC gui=bold guifg=PeachPuff guibg=Gray45
 hi VertSplit gui=bold guifg=White guibg=Gray45
 hi Title gui=bold guifg=DeepPink3
@@ -51,6 +51,8 @@ hi DiffDelete gui=bold guifg=LightBlue guibg=#f6e8d0
 hi DiffText gui=bold guibg=#ff8060
 hi Cursor guifg=bg guibg=fg
 hi lCursor guifg=bg guibg=fg
+
+hi HGRev guifg=white gui=bold guibg=darkred ctermbg=darkred ctermfg=white cterm=bold
 
 " Colors for syntax highlighting
 " see http://www.vim.org/htmldoc/syntax.html#{group-name}
