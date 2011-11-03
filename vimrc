@@ -1,7 +1,22 @@
 "commons für vim und gvim
 
 set nowrap 
-set formatoptions+=t
+
+
+" formatoptions:
+" c - autowrap COMMENTS using textwidth
+" r - insert comment leader (?) on <enter>
+" o - insert comment leader on 'o' or 'O'
+" q - gq formats comments (?)
+" n - recon numbered lists
+" v - wrap on blanks
+" t - autowrap TEXT using textwidth
+set formatoptions+=tcrq
+
+"endlich!
+"set colorcolumn=80
+set cc=+1
+
 set textwidth=79
 set backspace=2
 
@@ -21,6 +36,10 @@ set ruler
 set hlsearch
 set switchbuf=newtab
 
+"set list
+"set lcs=tab:│┈
+
+
 " option würde Darstellung des revision status etc erlauben. Funktioniert aber
 " offenbar
 "let VCSCommandEnableBufferSetup=1
@@ -29,16 +48,13 @@ set switchbuf=newtab
 "hgRev works; see :help HGRevOptions
 let g:hgrevFlags = '-nb'
 let g:hgrevAddStatus = 0
-let g:hgrevNoRepoChar = ''
+let g:hgrevNoRepoChar = '-'
 "let g:hgrevAutoUpdate = 1
 
 
 "set statusline=%<%f\ [%{HGRev()}]\ %h%m%r%=%l,%c%V\ %P
 set statusline=%<%f\ %#HGRev#[%{HGRev()}]%*\ %h%m%r%=%l,%c%V\ %P
 
-"xml-plugin
-let xml_no_auto_nesting = 1
-"let xml_tag_completion_map = "/"
 
 "statusline immer an (mit hintergrund etc.)
 set laststatus=2
@@ -52,6 +68,10 @@ filetype plugin on
 filetype plugin indent on
 set ofu=syntaxcomplete#Complete
 
+"xml-plugin
+let g:xml_no_auto_nesting = 1
+let g:xml_syntax_folding = 1
+"let xml_tag_completion_map = "/"
 
 " #### Netrw options ####
 
@@ -91,9 +111,11 @@ map <C-j> gqap
 imap <C-BS> <C-w>
 
 
+
+
 "autocmd!
 "automatisches folding und xml-syntax für zope/plone templates
-autocmd BufRead *.pt :set syntax=xml filetype=xml foldnestmax=5 foldmethod=syntax fo-=t
+autocmd BufRead *.pt :set syntax=xml filetype=xml foldmethod=syntax 
 autocmd BufRead *.zcml :set syntax=xml filetype=xml
 autocmd BufRead *.css.dtml :set syntax=css
 

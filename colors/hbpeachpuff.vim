@@ -52,6 +52,8 @@ hi DiffText gui=bold guibg=#ff8060
 hi Cursor guifg=bg guibg=fg
 hi lCursor guifg=bg guibg=fg
 
+hi ColorColumn ctermbg=lightgrey guibg=Gray90
+
 hi HGRev guifg=white gui=bold guibg=darkred ctermbg=darkred ctermfg=white cterm=bold
 
 " Colors for syntax highlighting
@@ -66,4 +68,5 @@ hi Type gui=bold guifg=SeaGreen
 hi Ignore guifg=bg
 hi Error gui=bold guifg=White guibg=Red
 hi Todo guifg=Blue guibg=Yellow
+
 
