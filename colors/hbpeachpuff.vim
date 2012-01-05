@@ -52,7 +52,7 @@ hi DiffText gui=bold guibg=#ff8060
 hi Cursor guifg=bg guibg=fg
 hi lCursor guifg=bg guibg=fg
 
-hi ColorColumn ctermbg=lightgrey guibg=Gray90
+hi ColorColumn ctermbg=lightgrey guibg=Gray50
 
 hi HGRev guifg=white gui=bold guibg=darkred ctermbg=darkred ctermfg=white cterm=bold
 

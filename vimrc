@@ -13,11 +13,12 @@ set nowrap
 " t - autowrap TEXT using textwidth
 set formatoptions+=tcrq
 
-"endlich!
-"set colorcolumn=80
-set cc=+1
 
 set textwidth=79
+"endlich!
+"set colorcolumn=80
+"set cc=+1
+
 set backspace=2
 
 set showmode
