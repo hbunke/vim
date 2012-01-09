@@ -74,7 +74,13 @@ let g:xml_no_auto_nesting = 1
 let g:xml_syntax_folding = 1
 "let xml_tag_completion_map = "/"
 
+"pydiction
+let g:pydiction_location='~/.vim/pydiction/complete-dict'
+
 " #### Netrw options ####
+
+"hide menu
+let g:netrw_menu=0
 
 " open file in new tab
 let g:netrw_browse_split=3
@@ -91,6 +97,18 @@ let g:netrw_liststyle=3
 
 " ### ende netrw options ###
 
+" NERDTree
+"autocmd VimEnter * NERDTree
+"autocmd BufEnter * NERDTreeMirror
+"autocmd VimEnter * wincmd w
+
+let g:NERDTreeCaseSensitiveSort=1
+let g:NERDTreeHijackNetrw=0
+
+map <F9> <plug>NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_focus_on_files = 1
+let g:nerdtree_tabs_synchronize_view = 0
+let g:nerdtree_tabs_open_on_new_tab = 0
 
 " projekte haben sonst immer die swap-file mit drin; nervt bei rsync und
 " svn
@@ -136,8 +154,8 @@ let python_highlight_exceptions = 1
 let python_highlight_string_formatting = 1
 let python_highlight_string_format = 1
 let python_highlight_string_templates = 1
-let python_highlight_indent_errors = 0
-let python_highlight_space_errors = 0
+let python_highlight_indent_errors = 1
+let python_highlight_space_errors = 1
 let python_highlight_doctests = 1
 "
 "does not override any of the above!
@@ -185,7 +203,7 @@ map <F11> :TlistToggle <CR>
 map <F10> :cw <CR>
 
 "go to first tabpage, useful if tab 1 has the filebrowsing window
-map <F9> :tabfirst <CR>
+"map <F9> :tabfirst <CR>
 
 map :hg :RefreshMercurialRev
 
