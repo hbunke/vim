@@ -1,0 +1,6 @@
+*.pyc
+.netrwhist
+bundle/*
+view/*
+*vim-nerdtree*
+.VimballRecord
