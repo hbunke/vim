@@ -1,7 +1,10 @@
 "commons für vim und gvim
 
-set nowrap 
+execute pathogen#infect()
 
+syntax enable
+
+set nowrap 
 
 " formatoptions:
 " c - autowrap COMMENTS using textwidth
@@ -20,10 +23,8 @@ set textwidth=79
 "set cc=+1
 
 set backspace=2
-
 set showmode
 set showcmd
-
 set tabstop=4
 set shiftwidth=4
 set shiftround
@@ -36,38 +37,27 @@ set titleold=""
 set ruler
 set hlsearch
 set switchbuf=newtab
-
-"set list
-"set lcs=tab:│┈
-
-
-" option würde Darstellung des revision status etc erlauben. Funktioniert aber
-" offenbar
-"let VCSCommandEnableBufferSetup=1
-"set statusline=%<%f\ %{VCSCommandGetStatusLine()}\ %h%m%r%=%l,%c%V\ %P
-
-"hgRev works; see :help HGRevOptions
-let g:hgrevFlags = '-nb'
-let g:hgrevAddStatus = 0
-let g:hgrevNoRepoChar = '-'
-"let g:hgrevAutoUpdate = 1
-
-
-"set statusline=%<%f\ [%{HGRev()}]\ %h%m%r%=%l,%c%V\ %P
-set statusline=%<%f\ %#HGRev#[%{HGRev()}]%*\ %h%m%r%=%l,%c%V\ %P
-
-
-"statusline immer an (mit hintergrund etc.)
-set laststatus=2
-
+set nocp
+set ofu=syntaxcomplete#Complete
 "dateiname in tabs einfach, ohne pfad. Plus Tabnr.
 set gtl=[%N]\ %t
+set statusline=%<%f\ %y\ %*\ %h%m%r%=%l,%c%V\ %P
+"statusline immer an (mit hintergrund etc.)
+set laststatus=2
+set dir=~/.vimswap
+set fileformats=unix,dos
 
-set nocp
 filetype on
 filetype plugin on
 filetype plugin indent on
-set ofu=syntaxcomplete#Complete
+
+
+"Syntastic
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_wq=0
+let g:syntastic_mode_map = { 'mode': 'passive' }
+
+
 
 "xml-plugin
 let g:xml_no_auto_nesting = 1
@@ -77,76 +67,84 @@ let g:xml_syntax_folding = 1
 "pydiction
 let g:pydiction_location='~/.vim/pydiction/complete-dict'
 
-" #### Netrw options ####
 
+""" #### Netrw options ####
 "hide menu
 let g:netrw_menu=0
-
 " open file in new tab
 let g:netrw_browse_split=3
-
 " do not show these filetypes
 let g:netrw_list_hide='\.svn,\.pyc,\.hg*'
 let g:netrw_hide=1
-
 "make browsing directory current dir
 let g:netrw_keepdir=0
-
 " show tree
 let g:netrw_liststyle=3
-
 " ### ende netrw options ###
 
 " NERDTree
 "autocmd VimEnter * NERDTree
 "autocmd BufEnter * NERDTreeMirror
 "autocmd VimEnter * wincmd w
-
 let g:NERDTreeCaseSensitiveSort=1
 let g:NERDTreeHijackNetrw=0
-
-map <F9> <plug>NERDTreeTabsToggle<CR>
+let g:NERDTreeIgnore = ['\.pyc$']
 let g:nerdtree_tabs_focus_on_files = 1
 let g:nerdtree_tabs_synchronize_view = 0
 let g:nerdtree_tabs_open_on_new_tab = 0
 
-" projekte haben sonst immer die swap-file mit drin; nervt bei rsync und
-" svn
-set dir=~/.vimswap
 
-syntax enable
+" folding leicht gemacht
+function! HB:Folding()
+    set foldnestmax=2
+    set foldmethod=indent
+    set foldcolumn=2
+endfunction
 
-set fileformats=unix,dos
 
+""""" keybindings """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map Q gq
-
-
 " trying to imitate some Pico / jpico settings
 map <C-k> dd
 map <C-u> p
 map <C-j> gqap
 
-" delete the current word in insert mode
-imap <C-BS> <C-w>
+"### function key maps ###
+map <F12> :execute HB:Folding()<CR>
+
+" toggle tag-list
+map <F11> :TlistToggle <CR>
+map <F10> :SyntasticToggleMode <CR>
+
+" open quickfix window
+map <F9> <plug>NERDTreeTabsToggle<CR>
 
 
+" Wechseln zwischen Fenstern
+map <C-Left> <C-W><Left>
+map <C-Right> <C-W><Right>
+map <C-Up> <C-W><Up>
+map <C-Down> <C-W><Down>
 
 
-"autocmd!
+"moving tabs; 
+"see http://vim.wikia.com/wiki/Move_the_current_tabpage_forward_or_backward
+noremap <silent> <M-Left> :exe "silent! tabmove " . (tabpagenr() - 2)<CR>
+noremap <silent> <M-Right> :exe "silent! tabmove " . tabpagenr()<CR>
+
+"""""  end keybindings """"""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
 "automatisches folding und xml-syntax für zope/plone templates
 autocmd BufRead *.pt :set syntax=xml filetype=xml foldmethod=syntax 
 autocmd BufRead *.zcml :set syntax=xml filetype=xml
 autocmd BufRead *.css.dtml :set syntax=css
-
-autocmd FileType python compiler pylint
+"autocmd FileType python compiler pylint
 autocmd FileType python set number
-let g:pylint_onwrite = 0
 autocmd BufRead,BufNewFile hg-editor-*.txt :set syntax=hgcommit
-
-
-
 "autocmd BufRead *.py :set fo-=t
 "autocmd BufNewFile *.py :read ~/.vim/templates/python.py
+autocmd BufRead /tmp/mutt* :source ~/.vim/mail.rc
 
 " #### Python.vim syntax options ####
 let python_highlight_builtins = 1
@@ -169,70 +167,6 @@ let Tlist_Sort_Type = "name"
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Enable_Fold_Column = 0
 
-
-" Wechseln zwischen Fenstern
-map <C-Left> <C-W><Left>
-map <C-Right> <C-W><Right>
-map <C-Up> <C-W><Up>
-map <C-Down> <C-W><Down>
-
-
-"moving tabs; 
-"see http://vim.wikia.com/wiki/Move_the_current_tabpage_forward_or_backward
-noremap <silent> <M-Left> :exe "silent! tabmove " . (tabpagenr() - 2)<CR>
-noremap <silent> <M-Right> :exe "silent! tabmove " . tabpagenr()<CR>
-
-
-" folding leicht gemacht
-function! HB:Folding()
-    set foldnestmax=2
-    set foldmethod=indent
-    set foldcolumn=2
-endfunction
-
-"### function key maps ###
-map <F12> :execute HB:Folding()<CR>
-
-" toggle tag-list
-map <F11> :TlistToggle <CR>
-
-" open current directory in vertical split window
-" map <F10> :vs . <CR>
-
-" open quickfix window
-map <F10> :cw <CR>
-
-"go to first tabpage, useful if tab 1 has the filebrowsing window
-"map <F9> :tabfirst <CR>
-
-map :hg :RefreshMercurialRev
-
-
-" testing toggle filebrowser toggle
-" funktioniert alles noch nicht 100%ig
-"function! HB:ToggleFilebrowser()
-"   let tabpagenr = tabpagenr()
-"   let buffers_in_tab = tabpagebuflist()
-"   let key = 'netrw_magickeep'
-"        
-"   if len(buffers_in_tab) > 1
-"       for bnu in buffers_in_tab
-"           "let b:bufwinnr = bufwinnr(bnu)
-"           exe bufwinnr(bnu) . "wincmd w"
-"           let b:bufwinnr = bufwinnr(bnu)
-"           let b:winvars = gettabwinvar(tabpagenr, b:bufwinnr, '')
-"           if has_key(b:winvars, key)
-"               echo "Buffer number" bnu "has key; closing"
-"               close
-"           endif
-"       endfor
-"   else
-"       execute ":vs ."
-"   endif
-"endfunction
-"map <F8> :execute HB:ToggleFilebrowser()<CR>
-
-autocmd BufRead /tmp/mutt* :source ~/.vim/mail.rc
 
 loadview
 
