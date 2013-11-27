@@ -12,14 +12,14 @@ endif
 let g:colors_name = "hb"
 
 " Definitionen
-hi Comment ctermfg=grey guifg=#404040 gui=italic
+hi Comment ctermfg=lightblue guifg=#404040 gui=italic
 
 "hi Normal ctermfg=black ctermbg=white guibg=PeachPuff guifg=black
-hi Normal ctermfg=black  guibg=#ededed guifg=black
+hi Normal ctermfg=black  ctermbg=white guibg=#ededed guifg=black
 "hi Normal ctermfg=black ctermbg=white guibg=#f4f4f4 guifg=black
 
 hi Constant ctermfg=darkred
-hi Special ctermfg=blue cterm=bold
+hi Special ctermfg=lightblue cterm=bold
 hi Delimiter ctermfg=Black cterm=bold guifg=black gui=bold
 hi Identifier ctermfg=darkcyan cterm=bold guifg=#4b4b4b gui=bold
 "hi Identifier ctermfg=darkblue cterm=bold guifg=#4c679e gui=bold
