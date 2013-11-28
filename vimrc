@@ -1,6 +1,7 @@
 "commons für vim und gvim
 
 execute pathogen#infect()
+Helptags
 
 syntax enable
 
@@ -89,9 +90,11 @@ let g:netrw_liststyle=3
 let g:NERDTreeCaseSensitiveSort=1
 let g:NERDTreeHijackNetrw=0
 let g:NERDTreeIgnore = ['\.pyc$']
+let g:NERDTreeShowHidden=1
+
 let g:nerdtree_tabs_focus_on_files = 1
-let g:nerdtree_tabs_synchronize_view = 0
-let g:nerdtree_tabs_open_on_new_tab = 0
+let g:nerdtree_tabs_synchronize_view = 1
+let g:nerdtree_tabs_open_on_new_tab = 1
 
 
 " folding leicht gemacht
@@ -116,9 +119,9 @@ map <F12> :execute HB:Folding()<CR>
 map <F11> :TlistToggle <CR>
 map <F10> :SyntasticToggleMode <CR>
 
-" open quickfix window
-map <F9> <plug>NERDTreeTabsToggle<CR>
-
+" toggle filetree
+"map <F9> <plug>NERDTreeTabsToggle<CR>
+map <F9> <plug>NERDTreeMirrorToggle<CR>
 
 " Wechseln zwischen Fenstern
 map <C-Left> <C-W><Left>
@@ -166,7 +169,7 @@ let Tlist_Show_One_File = 1
 let Tlist_Sort_Type = "name"
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Enable_Fold_Column = 0
+let Tlist_Use_Right_Window = 1
 
-
-loadview
+"loadview
 

@@ -6,7 +6,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "black_on_white"
+let colors_name = "hb_warm_grey"
 
 if version >= 700
   hi CursorLine guibg=#e4e2e0
@@ -35,6 +35,8 @@ hi lCursor   guifg=black   guibg=white
 hi LineNr    guifg=#646260 guibg=#d8d4d0 gui=italic
 
 hi Normal    guifg=#444240   guibg=#f0f0f0
+"hi Normal    guifg=#444240   guibg=#FDF6E3 "solarized background
+
 
 hi StatusLine guifg=white guibg=#888480 gui=bold
 hi StatusLineNC guifg=#848280 guibg=#c8c4c0 gui=italic
@@ -78,8 +80,9 @@ hi Identifier guifg=#545250 gui=none
 
 "hi Repeat      guifg=darkred gui=bold
 hi Repeat      guifg=#545250 gui=underline
-"hi Conditional guifg=darkred gui=bold
-hi Conditional guifg=#545250 gui=underline
+
+hi Conditional guifg=darkgreen gui=bold
+"hi Conditional guifg=#545250 gui=underline
 
 " Cheetah: #-Symbol, function-names, D: import
 hi PreProc    guifg=#705060 gui=bold

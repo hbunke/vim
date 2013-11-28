@@ -1,0 +1,25 @@
+[submodule "bundle/molokai"]
+    path= bundle/molokai
+    url = https://github.com/tomasr/molokai.git
+    ignore = dirty
+[submodule "bundle/nerdtree"]
+    path = bundle/nerdtree
+    url = https://github.com/scrooloose/nerdtree.git
+    ignore = dirty
+[submodule "bundle/taglist.vim"]
+    path = bundle/taglist.vim
+    url = https://github.com/vim-scripts/taglist.vim.git
+    ignore = dirty
+[submodule "bundle/vcscommand.vim"]
+    path = bundle/vcscommand.vim
+    url = https://github.com/vim-scripts/vcscommand.vim.git
+    ignore = dirty
+[submodule "bundle/vim-colors-solarized"]
+    path = bundle/vim-colors-solarized
+    url = https://github.com/altercation/vim-colors-solarized.git
+    ignore = dirty
+[submodule "bundle/vim-nerdtree-tabs"]
+    path = bundle/vim-nerdtree-tabs
+    url = https://github.com/jistr/vim-nerdtree-tabs.git
+    ignore = dirty
+
