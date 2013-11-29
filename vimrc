@@ -53,20 +53,10 @@ filetype plugin on
 filetype plugin indent on
 
 
-"Syntastic
-let g:syntastic_auto_loc_list=1
-let g:syntastic_check_on_wq=0
-let g:syntastic_mode_map = { 'mode': 'passive' }
 
-
-
-"xml-plugin
-let g:xml_no_auto_nesting = 1
-let g:xml_syntax_folding = 1
-"let xml_tag_completion_map = "/"
 
 "pydiction
-let g:pydiction_location='~/.vim/pydiction/complete-dict'
+"let g:pydiction_location='~/.vim/pydiction/complete-dict'
 
 
 """ #### Netrw options ####
@@ -149,18 +139,8 @@ autocmd BufRead,BufNewFile hg-editor-*.txt :set syntax=hgcommit
 "autocmd BufNewFile *.py :read ~/.vim/templates/python.py
 autocmd BufRead /tmp/mutt* :source ~/.vim/mail.rc
 
-" #### Python.vim syntax options ####
-let python_highlight_builtins = 1
-let python_highlight_exceptions = 1
-let python_highlight_string_formatting = 1
-let python_highlight_string_format = 1
-let python_highlight_string_templates = 1
-let python_highlight_indent_errors = 1
-let python_highlight_space_errors = 1
-let python_highlight_doctests = 1
-"
-"does not override any of the above!
-" let python_highlight_all = 1
+
+
 
 " ### Taglist options
 let Tlist_File_Fold_Auto_Close = 1
