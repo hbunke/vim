@@ -17,7 +17,7 @@ if version > 580
     endif
 endif
 
-let g:colors_name="two2tango"
+let g:colors_name="hb_two2tango"
 
 "Tango palette
 "http://tango.freedesktop.org/Tango_Icon_Theme_Guidelines
@@ -41,8 +41,8 @@ let s:Background    = '#212628'
 execute "hi Normal      guibg=" . s:Aluminium[5]  . " guifg=" . s:Aluminium[1] 
 
 " {{{ syntax
-execute "hi Comment      gui=italic guifg=" . s:Aluminium[3]
-"hi Comment      gui=italic guifg=#C0C0C0
+"execute "hi Comment      gui=italic guifg=" . s:Aluminium[4]
+hi Comment      gui=italic guifg=#A4A4A4
 
 execute "hi Conditional  gui=bold guifg=" . s:Butter[2]
 execute "hi Constant     guifg=" . s:Chocolate[1]

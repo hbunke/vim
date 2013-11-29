@@ -1,8 +1,14 @@
 "commons für vim und gvim
+"
 
 execute pathogen#infect()
 Helptags
 
+
+
+filetype on
+filetype plugin on
+filetype plugin indent on
 syntax enable
 
 set nowrap 
@@ -47,10 +53,6 @@ set statusline=%<%f\ %y\ %*\ %h%m%r%=%l,%c%V\ %P
 set laststatus=2
 set dir=~/.vimswap
 set fileformats=unix,dos
-
-filetype on
-filetype plugin on
-filetype plugin indent on
 
 
 
@@ -106,7 +108,8 @@ map <C-j> gqap
 map <F12> :execute HB:Folding()<CR>
 
 " toggle tag-list
-map <F11> :TlistToggle <CR>
+"map <F11> :TlistToggle <CR>
+map <F11> :TagbarToggle <CR>
 map <F10> :SyntasticToggleMode <CR>
 
 " toggle filetree

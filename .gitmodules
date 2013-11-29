@@ -35,3 +35,9 @@
 [submodule "bundle/vim-jinja"]
 	path = bundle/vim-jinja
 	url = https://github.com/lepture/vim-jinja.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "bundle/simple-pairs"]
+	path = bundle/simple-pairs
+	url = https://github.com/vim-scripts/simple-pairs.git
