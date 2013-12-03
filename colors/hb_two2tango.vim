@@ -56,6 +56,7 @@ execute "hi Special      guifg=" . s:SkyBlue[1]
 
 execute "hi Statement    gui=bold guifg=" . s:Aluminium[0]
 "hi Statement gui=bold guifg=#C0C0C0
+"hi Statement gui=bold guifg=#4E9A06 
 
 execute "hi String        guifg=" . s:SkyBlue[0]
 execute "hi Title        guifg=" . s:Aluminium[0]
