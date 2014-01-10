@@ -142,6 +142,10 @@ autocmd BufRead,BufNewFile hg-editor-*.txt :set syntax=hgcommit
 "autocmd BufNewFile *.py :read ~/.vim/templates/python.py
 autocmd BufRead /tmp/mutt* :source ~/.vim/mail.rc
 
+"Evervim
+"
+let g:evervim_devtoken='S=s79:U=813871:E=14ad35941f1:C=1437ba815f9:P=1cd:A=en-devtoken:V=2:H=b2a14a55c6391117b43a725e1fbff2c8'
+
 
 
 
