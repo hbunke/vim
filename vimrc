@@ -90,7 +90,7 @@ let g:nerdtree_tabs_open_on_new_tab = 1
 
 
 " folding leicht gemacht
-function! HB:Folding()
+function! HB_Folding()
     set foldnestmax=2
     set foldmethod=indent
     set foldcolumn=2
@@ -105,7 +105,7 @@ map <C-u> p
 map <C-j> gqap
 
 "### function key maps ###
-map <F12> :execute HB:Folding()<CR>
+map <F12> :execute HB_Folding()<CR>
 
 " toggle tag-list
 "map <F11> :TlistToggle <CR>
