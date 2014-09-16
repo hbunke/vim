@@ -1,4 +1,4 @@
-"commons für vim und gvim
+"commons for vim und gvim
 "
 
 execute pathogen#infect()
@@ -55,8 +55,6 @@ set dir=~/.vimswap
 set fileformats=unix,dos
 
 
-
-
 "pydiction
 "let g:pydiction_location='~/.vim/pydiction/complete-dict'
 
@@ -99,7 +97,7 @@ endfunction
 
 """"" keybindings """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map Q gq
-" trying to imitate some Pico / jpico settings
+" trying to imitate some oooold Pico / jpico settings
 map <C-k> dd
 map <C-u> p
 map <C-j> gqap
@@ -131,7 +129,7 @@ noremap <silent> <M-Right> :exe "silent! tabmove " . tabpagenr()<CR>
 """""  end keybindings """"""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-"automatisches folding und xml-syntax für zope/plone templates
+"folding and xml-syntax for zope/plone templates
 autocmd BufRead *.pt :set syntax=xml filetype=xml foldmethod=syntax 
 autocmd BufRead *.zcml :set syntax=xml filetype=xml
 autocmd BufRead *.css.dtml :set syntax=css
@@ -141,16 +139,12 @@ autocmd BufRead,BufNewFile hg-editor-*.txt :set syntax=hgcommit
 "autocmd BufRead *.py :set fo-=t
 "autocmd BufNewFile *.py :read ~/.vim/templates/python.py
 autocmd BufRead /tmp/mutt* :source ~/.vim/mail.rc
+autocmd BufRead *.nix :set syntax=nix
 
 "txt files are supposed to be in markdown. doesn't hurt otherwise
 autocmd BufRead *.txt :set syntax=markdown
 
-"Evervim
-let g:evervim_devtoken='S=s79:U=813871:E=14ad35941f1:C=1437ba815f9:P=1cd:A=en-devtoken:V=2:H=b2a14a55c6391117b43a725e1fbff2c8'
-
 let g:agprg="/usr/bin/ag --column"
-
-
 
 " ### Taglist options
 let Tlist_File_Fold_Auto_Close = 1
