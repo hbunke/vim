@@ -126,6 +126,10 @@ map <C-Down> <C-W><Down>
 noremap <silent> <M-Left> :exe "silent! tabmove " . (tabpagenr() - 2)<CR>
 noremap <silent> <M-Right> :exe "silent! tabmove " . tabpagenr()<CR>
 
+"vim-geeknote
+noremap <F8> :Geeknote<cr>
+
+
 """""  end keybindings """"""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -154,6 +158,11 @@ let Tlist_Sort_Type = "name"
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Enable_Fold_Column = 0
 let Tlist_Use_Right_Window = 1
+
+" buggy and not recommended. But unfortunately this means that we can store
+" plain text only, which is is most cases not desired
+"let g:GeeknoteFormat="markdown"
+
 
 "loadview
 
