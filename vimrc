@@ -163,6 +163,7 @@ let Tlist_Use_Right_Window = 1
 " plain text only, which is is most cases not desired
 "let g:GeeknoteFormat="markdown"
 
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 "loadview
 
