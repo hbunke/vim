@@ -4,8 +4,6 @@
 execute pathogen#infect()
 Helptags
 
-
-
 filetype on
 filetype plugin on
 filetype plugin indent on
@@ -23,9 +21,7 @@ set nowrap
 " t - autowrap TEXT using textwidth
 set formatoptions+=tcrq
 
-
 set textwidth=79
-"endlich!
 "set colorcolumn=80
 "set cc=+1
 
@@ -54,11 +50,6 @@ set laststatus=2
 set dir=~/.vimswap
 set fileformats=unix,dos
 
-
-"pydiction
-"let g:pydiction_location='~/.vim/pydiction/complete-dict'
-
-
 """ #### Netrw options ####
 "hide menu
 let g:netrw_menu=0
@@ -71,7 +62,6 @@ let g:netrw_hide=1
 let g:netrw_keepdir=0
 " show tree
 let g:netrw_liststyle=3
-" ### ende netrw options ###
 
 " NERDTree
 "autocmd VimEnter * NERDTree
@@ -87,7 +77,8 @@ let g:nerdtree_tabs_synchronize_view = 1
 let g:nerdtree_tabs_open_on_new_tab = 1
 
 
-" folding leicht gemacht
+
+" folding 
 function! HB_Folding()
     set foldnestmax=2
     set foldmethod=indent
@@ -111,8 +102,27 @@ map <F11> :TagbarToggle <CR>
 map <F10> :SyntasticToggleMode <CR>
 
 " toggle filetree
-"map <F9> <plug>NERDTreeTabsToggle<CR>
 map <F9> <plug>NERDTreeMirrorToggle<CR>
+
+"buffergator 
+map <F8> :BuffergatorToggle<cr>
+let g:buffergator_viewport_split_policy="L"
+let g:buffergator_sort_regime="mru"
+let g:buffergator_mru_cycle_local_to_window=0
+
+
+"vim-geeknote
+noremap <F7> :Geeknote<cr>
+" buggy and not recommended. But unfortunately this means that we can store
+" plain text only, which is is most cases not desired
+"let g:GeeknoteFormat="markdown"
+
+let g:GeeknoteExplorerWidth=35
+
+
+"vim-flake8 uses by default F7, which we want for geeknote
+autocmd FileType python map <buffer> <F6> :call Flake8()<CR>
+
 
 " Wechseln zwischen Fenstern
 map <C-Left> <C-W><Left>
@@ -120,14 +130,11 @@ map <C-Right> <C-W><Right>
 map <C-Up> <C-W><Up>
 map <C-Down> <C-W><Down>
 
-
 "moving tabs; 
 "see http://vim.wikia.com/wiki/Move_the_current_tabpage_forward_or_backward
 noremap <silent> <M-Left> :exe "silent! tabmove " . (tabpagenr() - 2)<CR>
 noremap <silent> <M-Right> :exe "silent! tabmove " . tabpagenr()<CR>
 
-"vim-geeknote
-noremap <F8> :Geeknote<cr>
 
 
 """""  end keybindings """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -137,11 +144,9 @@ noremap <F8> :Geeknote<cr>
 autocmd BufRead *.pt :set syntax=xml filetype=xml foldmethod=syntax 
 autocmd BufRead *.zcml :set syntax=xml filetype=xml
 autocmd BufRead *.css.dtml :set syntax=css
-"autocmd FileType python compiler pylint
 autocmd FileType python set number
 autocmd BufRead,BufNewFile hg-editor-*.txt :set syntax=hgcommit
 "autocmd BufRead *.py :set fo-=t
-"autocmd BufNewFile *.py :read ~/.vim/templates/python.py
 autocmd BufRead /tmp/mutt* :source ~/.vim/mail.rc
 autocmd BufRead *.nix :set syntax=nix
 
@@ -158,10 +163,6 @@ let Tlist_Sort_Type = "name"
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Enable_Fold_Column = 0
 let Tlist_Use_Right_Window = 1
-
-" buggy and not recommended. But unfortunately this means that we can store
-" plain text only, which is is most cases not desired
-"let g:GeeknoteFormat="markdown"
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
