@@ -18,10 +18,10 @@
 #    path = bundle/vim-colors-solarized
 #    url = https://github.com/altercation/vim-colors-solarized.git
 #    ignore = dirty
-[submodule "bundle/vim-nerdtree-tabs"]
-    path = bundle/vim-nerdtree-tabs
-    url = https://github.com/jistr/vim-nerdtree-tabs.git
-    ignore = dirty
+#[submodule "bundle/vim-nerdtree-tabs"]
+#    path = bundle/vim-nerdtree-tabs
+#    url = https://github.com/jistr/vim-nerdtree-tabs.git
+#    ignore = dirty
 [submodule "bundle/jedi-vim"]
 	path = bundle/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
