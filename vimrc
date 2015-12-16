@@ -44,7 +44,11 @@ set nocp
 set ofu=syntaxcomplete#Complete
 "dateiname in tabs einfach, ohne pfad. Plus Tabnr.
 set gtl=[%N]\ %t
+
+"set statusline=%<%f\ %y\ %*\ %h%m%r%=%l,%c%V\ %P %{fugitive#statusline()}
 set statusline=%<%f\ %y\ %*\ %h%m%r%=%l,%c%V\ %P
+set statusline+=\ \ %{fugitive#statusline()}
+
 "statusline immer an (mit hintergrund etc.)
 set laststatus=2
 set dir=~/.vimswap
@@ -95,33 +99,31 @@ map <C-j> gqap
 
 "### function key maps ###
 map <F12> :execute HB_Folding()<CR>
-
-" toggle tag-list
-"map <F11> :TlistToggle <CR>
 map <F11> :TagbarToggle <CR>
 map <F10> :SyntasticToggleMode <CR>
-
-" toggle filetree
 map <F9> <plug>NERDTreeMirrorToggle<CR>
 
-"buffergator 
 map <F8> :BuffergatorToggle<cr>
 let g:buffergator_viewport_split_policy="L"
 let g:buffergator_sort_regime="mru"
 let g:buffergator_mru_cycle_local_to_window=0
 
-
 "vim-geeknote
-noremap <F7> :Geeknote<cr>
+"noremap <F7> :Geeknote<cr>
+
 " buggy and not recommended. But unfortunately this means that we can store
 " plain text only, which is is most cases not desired
 "let g:GeeknoteFormat="markdown"
+
 
 let g:GeeknoteExplorerWidth=35
 
 
 "vim-flake8 uses by default F7, which we want for geeknote
 autocmd FileType python map <buffer> <F6> :call Flake8()<CR>
+let g:flake8_show_in_gutter=1
+let g:flake8_show_in_file=1
+let g:flake8_max_markers=500
 
 
 " Wechseln zwischen Fenstern
@@ -134,7 +136,6 @@ map <C-Down> <C-W><Down>
 "see http://vim.wikia.com/wiki/Move_the_current_tabpage_forward_or_backward
 noremap <silent> <M-Left> :exe "silent! tabmove " . (tabpagenr() - 2)<CR>
 noremap <silent> <M-Right> :exe "silent! tabmove " . tabpagenr()<CR>
-
 
 
 """""  end keybindings """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -153,7 +154,7 @@ autocmd BufRead *.nix :set syntax=nix
 "txt files are supposed to be in markdown. doesn't hurt otherwise
 autocmd BufRead *.txt :set syntax=markdown
 
-let g:agprg="/usr/bin/ag --column"
+"let g:agprg="/usr/bin/ag --column"
 
 " ### Taglist options
 let Tlist_File_Fold_Auto_Close = 1
@@ -164,7 +165,7 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Enable_Fold_Column = 0
 let Tlist_Use_Right_Window = 1
 
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+hi ColorColumn guibg=#888a85 
 
-"loadview
+"set runtimepath^=~/.vim/bundle/ctrlp.vim
 
