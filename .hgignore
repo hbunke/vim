@@ -1,9 +1,0 @@
-## ignores for mercurial repository
-
-syntax: glob
-*.pyc
-.netrwhist
-bundle/*
-view/*
-*vim-nerdtree*
-.VimballRecord

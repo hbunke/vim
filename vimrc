@@ -1,8 +1,6 @@
 "commons for vim und gvim
 "
 
-execute pathogen#infect()
-Helptags
 
 filetype on
 filetype plugin on
@@ -10,6 +8,13 @@ filetype plugin indent on
 syntax enable
 
 set nowrap 
+
+" small but unvaluable!
+set wildmenu
+
+
+" helpful for quicklist file open
+" set switchbuf+=newtab
 
 " formatoptions:
 " c - autowrap COMMENTS using textwidth
@@ -25,6 +30,7 @@ set textwidth=79
 "set colorcolumn=80
 "set cc=+1
 
+set linespace=3
 set backspace=2
 set showmode
 set showcmd
@@ -60,7 +66,7 @@ let g:netrw_menu=0
 " open file in new tab
 let g:netrw_browse_split=3
 " do not show these filetypes
-let g:netrw_list_hide='\.svn,\.pyc,\.hg*'
+let g:netrw_list_hide='\.svn,\.pyc,\.hg*,\.git*'
 let g:netrw_hide=1
 "make browsing directory current dir
 let g:netrw_keepdir=0
@@ -72,13 +78,18 @@ let g:netrw_liststyle=3
 "autocmd BufEnter * NERDTreeMirror
 "autocmd VimEnter * wincmd w
 let g:NERDTreeCaseSensitiveSort=1
-let g:NERDTreeHijackNetrw=0
-let g:NERDTreeIgnore = ['\.pyc$']
+let g:NERDTreeHijackNetrw=1
+let g:NERDTreeIgnore = ['\.pyc$', '\.git$', 'Paste*', '\.egg-info$' ]
 let g:NERDTreeShowHidden=1
+let g:NERDTreeWinSize=31
 
+let g:nerdtree_tabs_open_on_gui_startup = 1
 let g:nerdtree_tabs_focus_on_files = 1
 let g:nerdtree_tabs_synchronize_view = 1
 let g:nerdtree_tabs_open_on_new_tab = 1
+
+" map <F9> :NERDTreeToggle<CR>
+map <F9> <plug>NERDTreeTabsToggle<CR>
 
 
 
@@ -101,7 +112,6 @@ map <C-j> gqap
 map <F12> :execute HB_Folding()<CR>
 map <F11> :TagbarToggle <CR>
 map <F10> :SyntasticToggleMode <CR>
-map <F9> <plug>NERDTreeMirrorToggle<CR>
 
 map <F8> :BuffergatorToggle<cr>
 let g:buffergator_viewport_split_policy="L"
@@ -134,8 +144,11 @@ map <C-Down> <C-W><Down>
 
 "moving tabs; 
 "see http://vim.wikia.com/wiki/Move_the_current_tabpage_forward_or_backward
+" XXX does not work with Xmonad
 noremap <silent> <M-Left> :exe "silent! tabmove " . (tabpagenr() - 2)<CR>
 noremap <silent> <M-Right> :exe "silent! tabmove " . tabpagenr()<CR>
+
+
 
 
 """""  end keybindings """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -166,6 +179,16 @@ let Tlist_Enable_Fold_Column = 0
 let Tlist_Use_Right_Window = 1
 
 hi ColorColumn guibg=#888a85 
+
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+" airline themes:
+" solarized
+" molokai
+" tomorrow
+" hybrid
+" zenburn
+let g:airline_theme = 'tomorrow'
 
 "set runtimepath^=~/.vim/bundle/ctrlp.vim
 
