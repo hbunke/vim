@@ -12,6 +12,7 @@ set nowrap
 " small but unvaluable!
 set wildmenu
 
+let mapleader = ","
 
 " helpful for quicklist file open
 " set switchbuf+=newtab
@@ -90,6 +91,18 @@ let g:nerdtree_tabs_open_on_new_tab = 1
 
 " map <F9> :NERDTreeToggle<CR>
 map <F9> <plug>NERDTreeTabsToggle<CR>
+
+
+" ack.vim with ag
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" don't jump to the first result
+cnoreabbrev Ack Ack!
+
+" ack shortcut
+noremap <Leader>f :Ack!<space>
 
 
 

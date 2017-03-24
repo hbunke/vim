@@ -1,0 +1,1 @@
+/home/bunke/nix-envs/vim-shell.nix
