@@ -1,0 +1,11 @@
+" settings for terminal vim only
+
+
+set background=dark
+" colorscheme solarized
+
+hi TabLineSel ctermfg=White ctermbg=Green
+hi TabLine ctermfg=White ctermbg=Blue
+
+
+source ~/.vim/vimrc
