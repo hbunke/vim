@@ -1,4 +1,6 @@
 # XXX keep this synced with vimEnv in .nixpkgs/config.nix!
+# actually not used, just for testing within shell
+# use vimEnv in .nixpkgs/config 
 
 with import <nixpkgs> {}; {
      viEnv = stdenv.mkDerivation {
@@ -39,6 +41,7 @@ with import <nixpkgs> {}; {
         ack
         ag
         vimPlugins.The_NERD_Commenter
+        vimPlugins.gruvbox
       ];
 
       pathsToLink = [ "/include" "/lib" ];
