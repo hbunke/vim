@@ -1,0 +1,12 @@
+[submodule "pack/hbunke/start/ack.vim"]
+	path = pack/hbunke/start/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "pack/hbunke/start/colormenu"]
+	path = pack/hbunke/start/colormenu
+	url = https://github.com/vim-scripts/colormenu.vim.git
+[submodule "pack/hbunke/start/jedi-vim"]
+	path = pack/hbunke/start/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "pack/hbunke/start/vim-flake8"]
+	path = pack/hbunke/start/vim-flake8
+	url = https://github.com/nvie/vim-flake8.git
