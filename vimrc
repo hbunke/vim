@@ -31,7 +31,6 @@ set textwidth=79
 "set colorcolumn=80
 "set cc=+1
 
-set linespace=3
 set backspace=2
 set showmode
 set showcmd
@@ -115,6 +114,10 @@ endfunction
 
 
 """"" keybindings """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"make that link jumping in vim help easier
+nmap t <C-]>
+
 map Q gq
 " trying to imitate some oooold Pico / jpico settings
 map <C-k> dd
@@ -180,8 +183,6 @@ autocmd BufRead *.nix :set syntax=nix
 "txt files are supposed to be in markdown. doesn't hurt otherwise
 autocmd BufRead *.txt :set syntax=markdown
 
-"let g:agprg="/usr/bin/ag --column"
-
 " ### Taglist options
 let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Show_Menu = 1
@@ -191,7 +192,6 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Enable_Fold_Column = 0
 let Tlist_Use_Right_Window = 1
 
-hi ColorColumn guibg=#888a85 
 
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
