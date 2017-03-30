@@ -31,7 +31,6 @@ set textwidth=79
 "set colorcolumn=80
 "set cc=+1
 
-set linespace=3
 set backspace=2
 set showmode
 set showcmd
