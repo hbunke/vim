@@ -1,5 +1,5 @@
 "specific GUI config
-
+"fonts in ~/.gvimrc
 
 " #### colorschemes ####
 
@@ -17,15 +17,6 @@ let g:solarized_visibility='high'
 
 "gruvbox
 let g:gruvbox_contrast_dark='hard'
-
-
-" ##### fonts! #############
-"set guifont=Courier\ 10\ Pitch\ 11
-set guifont=Liberation\ Mono\ 10
-"set guifont=Droid\ Sans\ Mono\ 10
-"set guifont=Inconsolata\ 10
-"set guifont=Source\ Code\ Pro\ 10
-"set guifont=Anonymous\ Pro\ 11
 
 " airline themes:
 " solarized
