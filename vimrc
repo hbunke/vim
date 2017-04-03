@@ -94,7 +94,7 @@ map <F9> <plug>NERDTreeTabsToggle<CR>
 
 " ack.vim with ag
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+  let g:ackprg = 'ag -f --vimgrep'
 endif
 
 " don't jump to the first result
