@@ -134,19 +134,8 @@ let g:buffergator_viewport_split_policy="L"
 let g:buffergator_sort_regime="mru"
 let g:buffergator_mru_cycle_local_to_window=0
 
-"vim-geeknote
-"noremap <F7> :Geeknote<cr>
 
-" buggy and not recommended. But unfortunately this means that we can store
-" plain text only, which is is most cases not desired
-"let g:GeeknoteFormat="markdown"
-
-
-let g:GeeknoteExplorerWidth=35
-
-
-"vim-flake8 uses by default F7, which we want for geeknote
-autocmd FileType python map <buffer> <F6> :call Flake8()<CR>
+" flake8
 let g:flake8_show_in_gutter=1
 let g:flake8_show_in_file=1
 let g:flake8_max_markers=500

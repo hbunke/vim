@@ -46,6 +46,5 @@ set showtabline=2
 
 set linespace=4
 
-
 source ~/.vim/vimrc
 
