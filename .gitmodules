@@ -19,3 +19,6 @@
 [submodule "pack/hbunke/start/hb_vim_colors"]
 	path = pack/hbunke/start/hb_vim_colors
 	url = https://github.com/hbunke/hb_vim_colors.git
+[submodule "pack/hbunke/start/vim-indent-object"]
+	path = pack/hbunke/start/vim-indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object
