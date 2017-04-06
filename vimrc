@@ -60,6 +60,11 @@ set laststatus=2
 set dir=~/.vimswap
 set fileformats=unix,dos
 
+" unnamed register to system clipboard
+set clipboard+=unnamed
+
+
+
 """ #### Netrw options ####
 "hide menu
 let g:netrw_menu=0
