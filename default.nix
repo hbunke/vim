@@ -41,7 +41,9 @@ with import <nixpkgs> {}; {
         ack
         ag
         vimPlugins.The_NERD_Commenter
-        vimPlugins.gruvbox
+        vimPlugins.gruvbox  
+        vimPlugins.vim-indent-object
+
       ];
 
       pathsToLink = [ "/include" "/lib" ];
