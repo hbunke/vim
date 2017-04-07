@@ -1,6 +1,11 @@
 "commons for vim und gvim
 "
 
+set background=dark
+" Tab colors for terminal:
+hi TabLineSel ctermfg=White ctermbg=Green
+hi TabLine ctermfg=White ctermbg=Blue
+
 
 filetype on
 filetype plugin on
@@ -197,5 +202,4 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 " zenburn
 let g:airline_theme = 'tomorrow'
 
-"set runtimepath^=~/.vim/bundle/ctrlp.vim
 

@@ -1,13 +1,10 @@
 "specific GUI config
-"fonts in ~/.gvimrc
 
-" #### colorschemes ####
+set guifont=Liberation\ Mono\ 10
 
-set background=dark
 "colorscheme hbpeachpuff
 "colorscheme hb_two2tango
 "colorscheme solarized
-"colorscheme obsidian2
 "colorscheme gruvbox
 colorscheme materialbox
 
@@ -18,17 +15,6 @@ let g:solarized_visibility='high'
 "gruvbox
 let g:gruvbox_contrast_dark='hard'
 
-" airline themes:
-" solarized
-" molokai
-" tomorrow
-" hybrid
-" zenburn
-let g:airline_theme = 'tomorrow'
-
-
-" eigentlich ein hack. Warum übernimmt gvim nicht die
-" Terminaleinstellung?
 set encoding=utf-8
 
 "gui without toolbar
@@ -46,5 +32,4 @@ set showtabline=2
 
 set linespace=4
 
-source ~/.vim/vimrc
 
