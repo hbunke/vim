@@ -3,6 +3,7 @@
 set guifont=Liberation\ Mono\ 10
 if hostname() == 'odo'
     set guifont=Liberation\ Mono\ 11
+endif
 
 "colorscheme hbpeachpuff
 "colorscheme hb_two2tango
