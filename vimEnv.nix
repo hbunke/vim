@@ -35,6 +35,7 @@ buildEnv {
         vimPlugins.The_NERD_Commenter
         vimPlugins.gruvbox  
         vimPlugins.vim-indent-object
+        vimPlugins.vim-markdown
 
       ];
 }
