@@ -6,6 +6,11 @@ set background=dark
 hi TabLineSel ctermfg=White ctermbg=Green
 hi TabLine ctermfg=White ctermbg=Blue
 
+" comments in terminal always italic; does work with Roxterm, does not work
+" with xfce-terminal
+hi Comment cterm=italic
+
+
 
 filetype on
 filetype plugin on
