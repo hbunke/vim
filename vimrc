@@ -107,11 +107,13 @@ let g:nerdtree_tabs_open_on_new_tab = 1
 map <F9> <plug>NERDTreeTabsToggle<CR>
 
 
-" ack.vim with ag
+" Ack
+" use ag instead of ack
 if executable('ag')
-  let g:ackprg = 'ag -f --vimgrep'
+  let g:ackprg = 'ag -f -Q --vimgrep'
 endif
-
+" highlight search term
+let g:ackhighlight = 1
 " don't jump to the first result
 cnoreabbrev Ack Ack!
 
@@ -187,6 +189,7 @@ autocmd BufRead *.nix :set syntax=nix
 "txt files are supposed to be in markdown. doesn't hurt otherwise
 autocmd BufRead *.txt :set syntax=markdown
 
+
 " ### Taglist options
 let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Show_Menu = 1
@@ -206,5 +209,6 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 " hybrid
 " zenburn
 let g:airline_theme = 'tomorrow'
+
 
 

@@ -36,6 +36,8 @@ buildEnv {
         vimPlugins.gruvbox  
         vimPlugins.vim-indent-object
         vimPlugins.vim-markdown
+       # vimPlugins.vim-dispatch
+
 
       ];
 }
