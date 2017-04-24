@@ -1,21 +1,46 @@
-"commons for vim und gvim
-"
-
-set background=dark
-" Tab colors for terminal:
-hi TabLineSel ctermfg=White ctermbg=Green
-hi TabLine ctermfg=White ctermbg=Blue
-
-" comments in terminal always italic; does work with Roxterm, does not work
-" with xfce-terminal
-hi Comment cterm=italic
-
-
 
 filetype on
 filetype plugin on
 filetype plugin indent on
 syntax enable
+
+
+set background=dark
+set t_Co=256
+set mouse=a
+
+" colors terminal only. gvimrc overwrites this
+colorscheme gruvbox
+"colorscheme solarized
+" colorscheme two2tango
+" colorscheme hybrid_material
+" colorscheme materialtheme
+" colorscheme molokai
+" colorscheme zenburn
+"colorscheme rdark-terminal
+"colorscheme jellybeans
+
+" airline themes:
+" solarized
+" molokai
+" tomorrow
+" gruvbox
+" hybrid
+" zenburn
+let g:airline_theme = 'gruvbox'
+
+"gruvbox
+let g:gruvbox_contrast_dark='hard'
+
+"solarized
+let g:solarized_contrast='high'
+let g:solarized_visibility='high'
+
+" comments always italic; does work in terminal with Roxterm, not 
+" with xfce-terminal.
+hi Comment cterm=italic gui=italic
+
+set encoding=utf-8
 
 set nowrap 
 
@@ -142,8 +167,10 @@ map <C-u> p
 map <C-j> gqap
 
 "### function key maps ###
-map <F12> :execute HB_Folding()<CR>
-map <F11> :TagbarToggle <CR>
+" XXX need to put Tagbar on F12, since F11 does not work in terminal. Folding
+" can be done without the shortcut function<
+" map <F12> :execute HB_Folding()<CR>
+map <F12> :TagbarToggle <CR>
 map <F10> :SyntasticToggleMode <CR>
 
 map <F8> :BuffergatorToggle<cr>
@@ -184,6 +211,8 @@ autocmd FileType python set number
 autocmd BufRead,BufNewFile hg-editor-*.txt :set syntax=hgcommit
 "autocmd BufRead *.py :set fo-=t
 autocmd BufRead /tmp/mutt* :source ~/.vim/mail.rc
+" nix mail
+autocmd BufRead /run/user/*/mutt* :source ~/.vim/mail.rc
 autocmd BufRead *.nix :set syntax=nix
 
 "txt files are supposed to be in markdown. doesn't hurt otherwise
@@ -201,14 +230,6 @@ let Tlist_Use_Right_Window = 1
 
 
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
-" airline themes:
-" solarized
-" molokai
-" tomorrow
-" hybrid
-" zenburn
-let g:airline_theme = 'tomorrow'
 
 
 

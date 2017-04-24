@@ -1,24 +1,24 @@
 "specific GUI config
 
+set background=dark
 set guifont=Liberation\ Mono\ 10
 if hostname() == 'odo'
     set guifont=Liberation\ Mono\ 11
 endif
 
-"colorscheme hbpeachpuff
-"colorscheme hb_two2tango
+"colorscheme two2tango
 "colorscheme solarized
 "colorscheme gruvbox
 colorscheme materialbox
 
-"solarized
-let g:solarized_contrast='high'
-let g:solarized_visibility='high'
-
-"gruvbox
-let g:gruvbox_contrast_dark='hard'
-
-set encoding=utf-8
+" airline themes:
+" solarized
+" molokai
+" tomorrow
+" gruvbox
+" hybrid
+" zenburn
+let g:airline_theme = 'tomorrow'
 
 "gui without toolbar
 set guioptions-=T

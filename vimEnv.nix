@@ -36,6 +36,7 @@ buildEnv {
         vimPlugins.gruvbox  
         vimPlugins.vim-indent-object
         vimPlugins.vim-markdown
+        vimPlugins.CSApprox
        # vimPlugins.vim-dispatch
 
 
