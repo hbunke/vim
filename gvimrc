@@ -34,5 +34,5 @@ set guioptions-=L
 set showtabline=2
 
 set linespace=4
-
+hi Comment cterm=italic gui=italic
 

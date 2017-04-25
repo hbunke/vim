@@ -1,9 +1,11 @@
+" vim config
+" gvimrc overrrides this eventually
+"
 
 filetype on
 filetype plugin on
 filetype plugin indent on
 syntax enable
-
 
 set background=dark
 set t_Co=256
@@ -11,14 +13,12 @@ set mouse=a
 
 " colors terminal only. gvimrc overwrites this
 colorscheme gruvbox
-"colorscheme solarized
+" colorscheme solarized
 " colorscheme two2tango
 " colorscheme hybrid_material
 " colorscheme materialtheme
-" colorscheme molokai
 " colorscheme zenburn
-"colorscheme rdark-terminal
-"colorscheme jellybeans
+" colorscheme rdark-terminal
 
 " airline themes:
 " solarized
@@ -155,6 +155,7 @@ function! HB_Folding()
 endfunction
 
 
+
 """"" keybindings """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "make that link jumping in vim help easier
@@ -196,8 +197,6 @@ map <C-Down> <C-W><Down>
 " XXX does not work with Xmonad
 noremap <silent> <M-Left> :exe "silent! tabmove " . (tabpagenr() - 2)<CR>
 noremap <silent> <M-Right> :exe "silent! tabmove " . tabpagenr()<CR>
-
-
 
 
 """""  end keybindings """"""""""""""""""""""""""""""""""""""""""""""""""""""
