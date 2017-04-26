@@ -230,5 +230,8 @@ let Tlist_Use_Right_Window = 1
 
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
+"YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion=1
+
 
 

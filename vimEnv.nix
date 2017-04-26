@@ -18,6 +18,7 @@ buildEnv {
         ack
         ag
         python27Packages.flake8
+        python27Packages.jedi 
         vimPlugins.ctrlp
         vimPlugins.nerdtree
         vimPlugins.tagbar
@@ -37,8 +38,8 @@ buildEnv {
         vimPlugins.vim-indent-object
         vimPlugins.vim-markdown
         vimPlugins.CSApprox
+        vimPlugins.YouCompleteMe
        # vimPlugins.vim-dispatch
-
 
       ];
 }

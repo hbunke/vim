@@ -16,6 +16,3 @@
 [submodule "pack/hbunke/start/hb_vim_colors"]
 	path = pack/hbunke/start/hb_vim_colors
 	url = https://github.com/hbunke/hb_vim_colors.git
-[submodule "pack/hbunke/opt/jedi-vim"]
-	path = pack/hbunke/opt/jedi-vim
-	url = https://github.com/davidhalter/jedi-vim.git
