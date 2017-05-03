@@ -11,12 +11,20 @@ set background=dark
 set t_Co=256
 set mouse=a
 
-" colors terminal only. gvimrc overwrites this
+" not compiled!
+" set termguicolors=1
+
+"gruvbox
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_italic=1
+let g:gruvbox_italicize_strings=1
+let g:gruvbox_invert_signs=1
+" let g:gruvbox_improved_strings=1
+
+" colors for terminal only. gvimrc overwrites this
 colorscheme gruvbox
 " colorscheme solarized
 " colorscheme two2tango
-" colorscheme hybrid_material
-" colorscheme materialtheme
 " colorscheme zenburn
 " colorscheme rdark-terminal
 
@@ -27,10 +35,9 @@ colorscheme gruvbox
 " gruvbox
 " hybrid
 " zenburn
+" powerlineish
 let g:airline_theme = 'gruvbox'
 
-"gruvbox
-let g:gruvbox_contrast_dark='hard'
 
 "solarized
 let g:solarized_contrast='high'
@@ -83,6 +90,7 @@ set hlsearch
 set switchbuf=newtab
 set nocp
 set ofu=syntaxcomplete#Complete
+
 "dateiname in tabs einfach, ohne pfad. Plus Tabnr.
 set gtl=[%N]\ %t
 
@@ -145,6 +153,10 @@ cnoreabbrev Ack Ack!
 " ack shortcut
 noremap <Leader>f :Ack!<space>
 
+" Airline
+let g:airline#extensions#tabline#enabled=1
+" only filename in tabline
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 
 " folding 
@@ -164,8 +176,12 @@ nmap t <C-]>
 map Q gq
 " trying to imitate some oooold Pico / jpico settings
 map <C-k> dd
-map <C-u> p
 map <C-j> gqap
+map <Leader>p "+gP
+
+" <C-v> for blockwise visual mode does not work in terminal
+map <Leader>v <C-V>
+
 
 "### function key maps ###
 " XXX need to put Tagbar on F12, since F11 does not work in terminal. Folding
@@ -174,10 +190,11 @@ map <C-j> gqap
 map <F12> :TagbarToggle <CR>
 map <F10> :SyntasticToggleMode <CR>
 
-map <F8> :BuffergatorToggle<cr>
-let g:buffergator_viewport_split_policy="L"
-let g:buffergator_sort_regime="mru"
-let g:buffergator_mru_cycle_local_to_window=0
+
+"map <F8> :BuffergatorToggle<cr>
+"let g:buffergator_viewport_split_policy="L"
+"let g:buffergator_sort_regime="mru"
+"let g:buffergator_mru_cycle_local_to_window=0
 
 
 " flake8
@@ -191,6 +208,11 @@ map <C-Left> <C-W><Left>
 map <C-Right> <C-W><Right>
 map <C-Up> <C-W><Up>
 map <C-Down> <C-W><Down>
+
+" with full screen make the left window resize accordingly (master window, like
+" in xmonad
+map <Leader>m :vertical resize 133<cr>
+
 
 "moving tabs; 
 "see http://vim.wikia.com/wiki/Move_the_current_tabpage_forward_or_backward
@@ -213,10 +235,11 @@ autocmd BufRead /tmp/mutt* :source ~/.vim/mail.rc
 " nix mail
 autocmd BufRead /run/user/*/mutt* :source ~/.vim/mail.rc
 autocmd BufRead *.nix :set syntax=nix
-
 "txt files are supposed to be in markdown. doesn't hurt otherwise
 autocmd BufRead *.txt :set syntax=markdown
 
+" xml is not handled automatically by vim-jinja
+autocmd BufRead,BufNewFile ~/dev/edawax/*/*.xml :set syntax=htmljinja
 
 " ### Taglist options
 let Tlist_File_Fold_Auto_Close = 1
@@ -227,8 +250,13 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Enable_Fold_Column = 0
 let Tlist_Use_Right_Window = 1
 
-
+" ctrlp
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+let g:ctrlp_match_window='bottom,order:ttb,results:20'
+map <Leader>b :CtrlPBuffer<cr>
+" just in case I fall back into old habits
+map <F8> :CtrlPBuffer<cr>
+
 
 "YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion=1

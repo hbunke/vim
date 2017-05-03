@@ -1,9 +1,12 @@
 "specific GUI config
 
 set background=dark
-set guifont=Liberation\ Mono\ 10
+" set guifont=Liberation\ Mono\ 11
+" set guifont=Source\ Code\ Pro\ 10.5
+set guifont=Roboto\ Mono\ 11
 if hostname() == 'odo'
-    set guifont=Liberation\ Mono\ 11
+"    set guifont=Liberation\ Mono\ 11
+    set guifont=Source\ Code\ Pro\ 11
 endif
 
 "colorscheme two2tango
@@ -18,7 +21,7 @@ colorscheme materialbox
 " gruvbox
 " hybrid
 " zenburn
-let g:airline_theme = 'tomorrow'
+let g:airline_theme = 'gruvbox'
 
 "gui without toolbar
 set guioptions-=T
@@ -31,8 +34,8 @@ set guioptions-=L
 
 " show tabline always. Avoids that ugly empty (Xmonad) or overlapping (i3)
 " space at the bottom of gvim windows
-set showtabline=2
+" set showtabline=2
 
-set linespace=4
-hi Comment cterm=italic gui=italic
+set linespace=2
+hi Comment gui=italic
 

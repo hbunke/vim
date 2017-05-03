@@ -27,7 +27,7 @@ buildEnv {
         vimPlugins.pluginnames2nix
         vimPlugins.vim-jinja
         vimPlugins.vim-nerdtree-tabs
-        vimPlugins.vim-buffergator
+        #vimPlugins.vim-buffergator
         vimPlugins.fugitive
         vimPlugins.vim-scala
         vimPlugins.airline

@@ -16,3 +16,6 @@
 [submodule "pack/hbunke/start/hb_vim_colors"]
 	path = pack/hbunke/start/hb_vim_colors
 	url = https://github.com/hbunke/hb_vim_colors.git
+[submodule "pack/hbunke/start/vim-jinja"]
+	path = pack/hbunke/start/vim-jinja
+	url = git://github.com/mitsuhiko/vim-jinja.git
