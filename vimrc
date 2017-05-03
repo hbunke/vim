@@ -7,12 +7,11 @@ filetype plugin on
 filetype plugin indent on
 syntax enable
 
+" terminal
 set background=dark
 set t_Co=256
 set mouse=a
-
-" not compiled!
-" set termguicolors=1
+"set termguicolors
 
 "gruvbox
 let g:gruvbox_contrast_dark='hard'
