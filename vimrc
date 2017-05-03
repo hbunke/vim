@@ -154,9 +154,9 @@ cnoreabbrev Ack Ack!
 noremap <Leader>f :Ack!<space>
 
 " Airline
-let g:airline#extensions#tabline#enabled=1
+" let g:airline#extensions#tabline#enabled=1
 " only filename in tabline
-let g:airline#extensions#tabline#fnamemod = ':t'
+" let g:airline#extensions#tabline#fnamemod = ':t'
 
 
 " folding 

@@ -1,6 +1,6 @@
 set textwidth=65
 colorscheme zenburn
-"colorscheme gruvbox
+" colorscheme gruvbox
 " colorscheme solarized
 
 " Signature is linked to Type
