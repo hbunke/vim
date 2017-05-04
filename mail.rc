@@ -1,12 +1,11 @@
+" vim: set ft=vim:
+
 set textwidth=65
-colorscheme zenburn
+" colorscheme zenburn
 " colorscheme gruvbox
 " colorscheme solarized
 
-" Signature is linked to Type
-" hi Type ctermfg=darkred guifg=#406090 gui=italic cterm=none
-
 " First Quote is linked to Comment?
-hi Comment cterm=italic
+" hi Comment cterm=italic
 
 
