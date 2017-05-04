@@ -39,6 +39,7 @@ buildEnv {
         vimPlugins.vim-markdown
         vimPlugins.CSApprox
         vimPlugins.YouCompleteMe
+        vimPlugins.haskell-vim
        # vimPlugins.vim-dispatch
 
       ];
