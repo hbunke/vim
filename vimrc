@@ -72,6 +72,7 @@ set textwidth=79
 "set colorcolumn=80
 "set cc=+1
 
+" set hidden
 set backspace=2
 set showmode
 set showcmd
@@ -86,7 +87,7 @@ set title
 set titleold=""
 set ruler
 set hlsearch
-set switchbuf=newtab
+set switchbuf=useopen,split
 set nocp
 set ofu=syntaxcomplete#Complete
 
@@ -255,6 +256,9 @@ let g:ctrlp_match_window='bottom,order:ttb,results:20'
 map <Leader>b :CtrlPBuffer<cr>
 " just in case I fall back into old habits
 map <F8> :CtrlPBuffer<cr>
+
+" search over the cwd, not only the git repository
+let g:ctrlp_working_path_mode = 'wa'
 
 
 "YouCompleteMe
