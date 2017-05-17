@@ -259,6 +259,8 @@ map <F8> :CtrlPBuffer<cr>
 
 " search over the cwd, not only the git repository
 let g:ctrlp_working_path_mode = 'wa'
+" follow symlinks
+let g:ctrlp_follow_symlinks = 2
 
 
 "YouCompleteMe
