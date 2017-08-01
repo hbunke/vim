@@ -9,9 +9,6 @@ buildEnv {
   name = "vimEnv";
   paths = [ 
       # UPDATE: flake8 seems to work when installing it in pack/... (vim8)
-      # UPDATE: you can install jedi inside the jedi-vim package with:
-      # 'git submodule update --init'
-      # see jedi-vim/README.rst
         vim_configurable
         python27Full
         ctags

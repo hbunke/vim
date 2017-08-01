@@ -72,6 +72,8 @@ set textwidth=79
 "set colorcolumn=80
 "set cc=+1
 
+
+set wildignore=*.pyc
 " set hidden
 set backspace=2
 set showmode
@@ -261,10 +263,13 @@ map <F8> :CtrlPBuffer<cr>
 let g:ctrlp_working_path_mode = 'wa'
 " follow symlinks
 let g:ctrlp_follow_symlinks = 2
-
+let g:ctrlp_max_files = 50000
 
 "YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion=1
 
-
+" haskell vim
+let hs_hightlight_types = 1
+let hs_highlight_more_types = 1
+let hs_highlight_boolean = 1
 
