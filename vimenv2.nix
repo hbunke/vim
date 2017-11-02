@@ -11,8 +11,8 @@
 with import <nixpkgs> {};
 
 vim_configurable.customize {
-    name = "vimEnv2";
-    
+    name = "vim";
+   
     # to avoid putting the whole vimrc here simply source it
     vimrcConfig.customRC = ''
     source $HOME/.vim/vimrc
