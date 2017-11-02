@@ -4,6 +4,9 @@
 
 # install with nix-env -f vimEnv.nix -i vimEnv
 
+# NOTE: this approach seems to work unter NixOS only. For other OS try to use
+# vimenv2.nix. Vice versa the latter does not work with NixOS  :-(
+
 with import <nixpkgs> {};
 buildEnv {
   name = "vimEnv";

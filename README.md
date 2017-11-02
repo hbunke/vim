@@ -12,3 +12,7 @@ cloning execute `git submodule init` and `git submodule update`.
 
 -   clone and activate the git submodules in `pack/hbunke/start`:
     `git submodule update --init`
+
+
+MOTE: vimEnv.nix seems to works under NixOS only. For other OS use vimenv2.nix
+(`nix-env -f ./vimenv2.nix -i vimEnv`)
