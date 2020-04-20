@@ -3,7 +3,10 @@ Vim Configuration
 
 ## Vundle version
 no nix install (because of Fedora Silverblue). System vim, resp. flathub
-version, plugins managed by Vundle
+version, plugins managed by Vundle.
+
+### Steps to install vundle version
+`./install_vundle.sh`
 
 
 ## nix branch
