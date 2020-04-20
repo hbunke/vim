@@ -48,6 +48,9 @@ vim_configurable.customize {
             "haskell-vim"
             "vim-colors-solarized"
            # "vim-latex-live-preview"
+             "ack-vim"
+             "vim-flake8"
+             "vim-addon-nix"
 
         ]; }
     ];

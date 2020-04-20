@@ -1,5 +1,5 @@
 *.pyc
 .netrwhist
-
+vim-addons/
 # think about integrating git modules in ./pack
 # pack/
