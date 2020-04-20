@@ -2,7 +2,7 @@
 # available in nixpkgs are managed in ./pack/hbunke/start/ (Vim 8!) as git
 # submodules
 
-# install with nix-env -f vimenv2.nix -i vimEnv2
+# install with nix-env -f vimenv2.nix -i vim
 
 # NOTE: this approach does not work under NixOS! Use vimEnv.nix instead
 
@@ -26,7 +26,7 @@ vim_configurable.customize {
             # They are installed managed by `vam` (a vim plugin manager)
             "Syntastic"
             "ctrlp"
-	          "gruvbox"
+	        "gruvbox"
             "airline"
             "nerdtree"
             "tagbar"
@@ -41,9 +41,13 @@ vim_configurable.customize {
             "The_NERD_Commenter"
             "vim-indent-object"
             "vim-markdown"
+          #  "vim-pandoc"
+          #  "vim-pandoc-syntax"
             "CSApprox"
-            "YouCompleteMe"
+          #  "YouCompleteMe"
             "haskell-vim"
+            "vim-colors-solarized"
+           # "vim-latex-live-preview"
 
         ]; }
     ];

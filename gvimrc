@@ -2,8 +2,8 @@
 
 set background=dark
 " set guifont=Liberation\ Mono\ 11
-" set guifont=Source\ Code\ Pro\ 10.5
-set guifont=Roboto\ Mono\ 11
+"set guifont=Source\ Code\ Pro\ 11
+set guifont=Roboto\ Mono\ 12
 if hostname() == 'odo'
 "    set guifont=Liberation\ Mono\ 11
     set guifont=Source\ Code\ Pro\ 11
@@ -11,8 +11,8 @@ endif
 
 "colorscheme two2tango
 "colorscheme solarized
-"colorscheme gruvbox
-colorscheme materialbox
+colorscheme gruvbox
+"colorscheme materialbox
 
 " airline themes:
 " solarized
@@ -34,7 +34,7 @@ set guioptions-=L
 
 " show tabline always. Avoids that ugly empty (Xmonad) or overlapping (i3)
 " space at the bottom of gvim windows
-" set showtabline=2
+set showtabline=2
 
 set linespace=2
 hi Comment gui=italic

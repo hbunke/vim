@@ -12,7 +12,8 @@ buildEnv {
   name = "vimEnv";
   paths = [ 
       # UPDATE: flake8 seems to work when installing it in pack/... (vim8)
-        vim_configurable
+        vim
+      #  vim_configurable
         python27Full
         ctags
         ack

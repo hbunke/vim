@@ -7,7 +7,10 @@ filetype plugin on
 filetype plugin indent on
 syntax enable
 
-" terminal
+
+map <C-j> gqap
+
+" terminala
 set background=dark
 set t_Co=256
 set mouse=a
@@ -22,13 +25,13 @@ let g:gruvbox_invert_signs=1
 
 " colors for terminal only. gvimrc overwrites this
 colorscheme gruvbox
-" colorscheme solarized
+"colorscheme solarized
 " colorscheme two2tango
 " colorscheme zenburn
 " colorscheme rdark-terminal
 
 " airline themes:
-" solarized
+"solarized
 " molokai
 " tomorrow
 " gruvbox
@@ -36,7 +39,7 @@ colorscheme gruvbox
 " zenburn
 " powerlineish
 let g:airline_theme = 'gruvbox'
-
+'
 
 "solarized
 let g:solarized_contrast='high'
@@ -116,7 +119,7 @@ let g:netrw_menu=0
 " open file in new tab
 let g:netrw_browse_split=3
 " do not show these filetypes
-let g:netrw_list_hide='\.svn,\.pyc,\.hg*,\.git*'
+let g:netrw_list_hide='\.svn,\.pyc,\.hg*,\.git*,\.aux,\.bbl,\.bcf'
 let g:netrw_hide=1
 "make browsing directory current dir
 let g:netrw_keepdir=0
@@ -129,7 +132,7 @@ let g:netrw_liststyle=3
 "autocmd VimEnter * wincmd w
 let g:NERDTreeCaseSensitiveSort=1
 let g:NERDTreeHijackNetrw=1
-let g:NERDTreeIgnore = ['\.pyc$', '\.git$', 'Paste*', '\.egg-info$' ]
+let g:NERDTreeIgnore = ['\.pyc$', '\.git$', 'Paste*', '\.egg-info$', '\.aux', '\.bbl', '\.bcf', '\.blg', '\.fdb_latexmk', '\.fls', '\.run.xml', '\.synctex.gz', '\.log' ]
 let g:NERDTreeShowHidden=1
 let g:NERDTreeWinSize=31
 
@@ -168,6 +171,8 @@ function! HB_Folding()
     set foldcolumn=2
 endfunction
 
+" disable automatic markdown folding:
+let g:vim_markdown_folding_disabled = 1
 
 
 """"" keybindings """"""""""""""""""""""""""""""""""""""""""""""""""""""""""

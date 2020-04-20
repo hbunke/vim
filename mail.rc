@@ -1,6 +1,9 @@
 " vim: set ft=vim:
 
-set textwidth=65
+" set textwidth=72
+set wrap linebreak nolist
+set wrapmargin=72 " wrapmargin is ignored when textwidth is non-zero
+
 " colorscheme zenburn
 " colorscheme gruvbox
 " colorscheme solarized
@@ -9,3 +12,4 @@ set textwidth=65
 " hi Comment cterm=italic
 
 
+map <C-j> gqap
