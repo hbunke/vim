@@ -1,10 +1,39 @@
 " vim config
 " gvimrc overrrides this eventually
-"
 
-filetype on
-filetype plugin on
+
+set nocompatible
+
+" Vundle
+filetype off
+set rtp+=$HOME/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+" Add plugins here
+Plugin 'morhetz/gruvbox'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'vim-airline/vim-airline'
+Plugin 'preservim/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'mitsuhiko/vim-jinja'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'tpope/vim-fugitive'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'ycm-core/YouCompleteMe'
+Plugin 'vim-latex/vim-latex'
+Plugin 'mileszs/ack.vim'
+Plugin 'nvie/vim-flake8'
+Plugin 'neovimhaskell/haskell-vim'
+Plugin 'spwhitt/vim-nix'
+
+call vundle#end()
 filetype plugin indent on
+
+
+
+
 syntax enable
 
 
