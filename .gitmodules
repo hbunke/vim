@@ -1,6 +1,3 @@
-[submodule "pack/hbunke/start/ack.vim"]
-	path = pack/hbunke/start/ack.vim
-	url = https://github.com/mileszs/ack.vim.git
 [submodule "pack/hbunke/start/colormenu"]
 	path = pack/hbunke/start/colormenu
 	url = https://github.com/vim-scripts/colormenu.vim.git
