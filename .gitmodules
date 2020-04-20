@@ -1,18 +1,3 @@
-[submodule "pack/hbunke/start/colormenu"]
-	path = pack/hbunke/start/colormenu
-	url = https://github.com/vim-scripts/colormenu.vim.git
-[submodule "pack/hbunke/start/vim-flake8"]
-	path = pack/hbunke/start/vim-flake8
-	url = https://github.com/nvie/vim-flake8.git
-[submodule "pack/hbunke/start/nix.vim"]
-	path = pack/hbunke/start/nix.vim
-	url = https://github.com/jgertm/nix.vim.git
-[submodule "pack/hbunke/start/nginx.vim"]
-	path = pack/hbunke/start/nginx.vim
-	url = https://github.com/vim-scripts/nginx.vim.git
-[submodule "pack/hbunke/start/hb_vim_colors"]
-	path = pack/hbunke/start/hb_vim_colors
-	url = https://github.com/hbunke/hb_vim_colors.git
 [submodule "pack/hbunke/start/vim-jinja"]
 	path = pack/hbunke/start/vim-jinja
 	url = git://github.com/mitsuhiko/vim-jinja.git
