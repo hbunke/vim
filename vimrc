@@ -27,6 +27,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'spwhitt/vim-nix'
+Plugin 'chr4/nginx.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -173,6 +174,9 @@ let g:nerdtree_tabs_open_on_new_tab = 1
 " map <F9> :NERDTreeToggle<CR>
 map <F9> <plug>NERDTreeTabsToggle<CR>
 
+
+
+map <C-j> gqap
 
 " Ack
 " use ag instead of ack
