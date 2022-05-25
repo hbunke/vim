@@ -1,8 +1,8 @@
 " vim: set ft=vim:
 
-" set textwidth=72
-set wrap linebreak nolist
-set wrapmargin=72 " wrapmargin is ignored when textwidth is non-zero
+set textwidth=65
+set nowrap nolist
+set wrapmargin=0 " wrapmargin is ignored when textwidth is non-zero
 
 " colorscheme zenburn
 " colorscheme gruvbox
