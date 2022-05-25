@@ -18,7 +18,7 @@ Plugin 'preservim/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-fugitive'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'ycm-core/YouCompleteMe'
@@ -28,6 +28,7 @@ Plugin 'nvie/vim-flake8'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'spwhitt/vim-nix'
 Plugin 'chr4/nginx.vim'
+Plugin 'mboughaba/i3config.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -54,7 +55,8 @@ let g:gruvbox_invert_signs=1
 " let g:gruvbox_improved_strings=1
 
 " colors for terminal only. gvimrc overwrites this
-colorscheme gruvbox
+colorscheme atom
+" colorscheme gruvbox
 "colorscheme solarized
 " colorscheme two2tango
 " colorscheme zenburn
